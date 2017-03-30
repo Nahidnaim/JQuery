@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JQuery || Background Color Change </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Color Change start -->
+    <div class="container">
+        <div class="wrapper">
+            <div class="header">
+                <h1>Change Background Color and Content background </h1>
+            </div>
+            <div class="content-body">
+                <h3>Cricket News</h3>
+                <p>Bangladesh Team played a wonderfull match with Srilanka. It's a great victory for us. Keep it up.</p>
+            </div>
+        </div>
+        <hr>
+        <h2>Change Color using Button</h2>
+        <button type="button" class="btn btn-primary" id="Primary">Primary</button>
+        <button type="button" class="btn btn-success" id="Success">Success</button>
+        <button type="button" class="btn btn-danger" id="Danger">Danger</button>
+    </div>
+    <!-- Background Color Change end -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#Primary").click(function(){
+                $('.wrapper').css({'background-color' : '#5CB85C'});
+                $('h1,h3,p').css({'background-color' : '#337AB7', 'color' : '#FFFFFF'});
+            });
+            $("#Success").click(function(){
+                $('.wrapper').css({'background-color' : '#D9534F'});
+                $('h1,h3,p').css({'background-color' : '#5CB85C', 'color' : '#000'});
+            });
+            $("#Danger").click(function(){
+                $('.wrapper').css({'background-color' : '#337AB7'});
+                $('h1,h3,p').css({'background-color' : '#D9534F', 'color' : '#ddd'});
+            });
+        });
+    </script>
+</body>
+</html>
